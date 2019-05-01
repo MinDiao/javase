@@ -1,0 +1,52 @@
+package com.tz.integer;
+
+import java.io.IOException;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
+import java.net.SocketException;
+
+public class UDPServerScannerRunnable implements Runnable {
+	public int port;
+	public String clientip;
+	
+	public UDPServerScannerRunnable(int port, String clientip) {
+		this.port = port;
+		this.clientip = clientip;
+	}
+
+	@Override
+	public void run() {
+		DatagramSocket ds = null;
+		try {
+			ds = new DatagramSocket(port);
+		} catch (SocketException e1) {
+			e1.printStackTrace();
+		}
+		while (true) {
+			try {
+				InetAddress ia = InetAddress.getByName(clientip);
+				if (clientip.equals(ia.getHostAddress())) {
+					
+					byte[] date = new byte[1024];
+					DatagramPacket dp = new DatagramPacket(date, date.length);
+					ds.receive(dp);
+					//获取地址
+					String ip = dp.getAddress().getHostAddress();
+					int port = dp.getPort();
+					int leng = dp.getLength();
+					System.out.println(new String(date, 0, leng)+"..."+ip+"..."+port);
+					
+					//关闭资源
+					dp = null;
+				}
+				ds.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+		
+	}
+
+}

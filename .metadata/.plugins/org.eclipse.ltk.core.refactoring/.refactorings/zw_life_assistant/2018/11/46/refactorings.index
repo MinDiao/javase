@@ -1,0 +1,12 @@
+1541919762224	Rename type 'Account_log'
+1541944463448	Rename type 'UserUI'
+1541945317207	Delete element
+1541945876766	Rename type 'MemorandumService'
+1541946111763	Rename type 'IMemorandumDao'
+1541946125237	Rename type 'MemorandumDaoImpl'
+1541946132601	Rename type 'Memorandum'
+1541946147054	Rename type 'IMemorandumService'
+1541946154107	Rename type 'MemorandumServiceImpl'
+1541946161562	Rename type 'MemorandumUI'
+1541958319940	Rename type 'IRankDao'
+1541958389376	Rename type 'IRanking'

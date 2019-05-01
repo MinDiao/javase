@@ -1,0 +1,31 @@
+package com.hp.assigments05;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		//实例化对象
+		Student s1 = new Student(12,"张三","男",19,73);
+		Student s2 = new Student(34,"李四","女",23,52);
+		Student s3 = new Student(45,"王五","男",53,43);
+		
+		//输出
+		s1.cell();
+		s2.cell();
+		s3.cell();
+		
+		//平均值
+		int average = s1.getJava() + s2.getJava() + s3.getJava();
+		System.out.println("平均值为:"average / 3);
+		
+		//最大最小值
+		int max = s1.getJava();
+		if (s2.getJava() > max) {
+			max = s2.getJava();
+		}
+		if (s3.getJava() > max) {
+			max = s3.getJava();
+		}
+		System.out.println("最大值为:"+max);
+	}
+
+}

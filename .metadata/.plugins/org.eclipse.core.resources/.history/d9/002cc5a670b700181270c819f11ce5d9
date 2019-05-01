@@ -1,0 +1,11 @@
+package com.hp.assigments05;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		new Student(12,"张三","男",19,78).cell();
+		new Student(34,"李四","女",23,89).cell();
+		new Student(45,"王五","男",53,67).cell();
+	}
+
+}

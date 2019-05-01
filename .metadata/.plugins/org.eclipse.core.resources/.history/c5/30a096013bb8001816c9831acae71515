@@ -1,0 +1,30 @@
+package com.tz.assigments01;
+
+class Station2 implements Runnable {
+	static int ticket = 20; //静态变量,防止票数混乱
+	private Object lock = new Object();
+	public void run() {
+		while (ticket > 0) {
+			synchronized (lock) { //创建同步锁
+				if (ticket > 0) {
+					System.out.println(Thread.currentThread().getName() +"站台卖的第"+ ticket +"票");
+					ticket--;
+				}
+			}
+			try {
+				Thread.sleep(1000); //创建线程休眠
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+public class SaleTicket02 {
+	public static void main(String[] args) {
+		Station2 s = new Station2();
+		new Thread(s,"站台A").start();
+		new Thread(s,"站台B").start();
+		new Thread(s,"站台C").start();
+	}
+}

@@ -1,0 +1,32 @@
+package com.tz.test03;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Map_Traversal {
+	public static void main(String[] args) {
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		map.put(1, "a");
+		map.put(2, "b");
+		run(map);
+		//run2();
+		//run3();
+		//run4();
+	}
+	
+	public static void run(HashMap<Integer,String> join) {
+		
+	}
+	
+	public static void run2() {
+			
+		}
+
+	public static void run3() {
+		
+	}
+	
+	public static void run4() {
+		
+	}
+}

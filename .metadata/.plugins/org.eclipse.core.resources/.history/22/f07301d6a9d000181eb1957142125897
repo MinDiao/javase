@@ -1,0 +1,174 @@
+package com.hpe.day13_2;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+/*视图层(V)：主要包含图形界面*/
+public class TelUI {
+	Scanner sc = new Scanner(System.in); // 获取控制台输入
+	TelMange tm = null;
+
+	public TelUI() {
+		tm = new TelMange();
+	}
+
+	public TelUI(int number) {
+		tm = new TelMange(number);
+	}
+
+	// 主界面
+	public void myMainUI() {
+		System.out.println("------------------电话本管理系统-------------------");
+		System.out.println("1.添加\t2.删除\t3.修改\t4.查询所有\t5.根据姓名查询\t0.退出");
+		System.out.println("------------------电话本管理系统-------------------");
+		System.out.println("请选择业务：");
+		// 获取控制台输入
+		int input = sc.nextInt();
+		switch (input) {
+		case 1:
+			myAddUI();
+			break;
+		case 2:
+			myDelUI();
+			break;
+		case 3:
+			myUpdateUI();
+			break;
+		case 4:
+			mySelectAllUI();
+			break;
+		case 5:
+			mySelectUI();
+			break;
+		case 0:
+			myQuitUI();
+			break;
+		default:
+			System.out.println("您输入的选项有问题，请重新输入！");
+			// 返回主界面
+			myMainUI();
+			break;
+		}
+	}
+
+	// 添加界面
+	public void myAddUI() {
+		System.out.println("------------------添加电话本-------------------");
+		
+		// 获取控制台输入
+		System.out.println("姓名：");
+		String name = sc.next();
+		System.out.println("性别：");
+		String sex = sc.next();
+		System.out.println("年龄：");
+		int age = sc.nextInt();
+		System.out.println("QQ:");
+		String qq = sc.next();
+		System.out.println("电话：");
+		String tel = sc.next();
+		System.out.println("地址：");
+		String dir = sc.next();
+		// 将新创建的联系人添加到电话本
+		PeopleInfo pInfo = new PeopleInfo(name, sex, age, tel, qq, dir); // 创建一个新的联系人
+		int result = tm.myAdd(pInfo);
+		switch (result) {
+		case 0:
+			System.out.println("添加成功！");
+			break;
+		case -1:
+			System.out.println("添加失败，该联系人已经存在！");
+			break;
+		case -2:
+			System.out.println("添加失败，电话本容量不足！");
+		default:
+			break;
+		}
+		// 返回主界面
+		myMainUI();
+	}
+
+	// 删除界面
+	public void myDelUI() {
+		System.out.println("------------------删除电话本-------------------");
+		System.out.println("请输入要删除人的姓名：");
+		String delName = sc.next();
+		// 先查询要删除的人是否存在
+		PeopleInfo piInfo = tm.mySelect(delName);
+		if(piInfo==null){
+			System.out.println("无此联系人信息！");
+		}else{
+			System.out.println(piInfo.toString());
+			System.out.println("确定要删除吗？1(是)0(否)");
+			int input = sc.nextInt();
+			if(1==input){
+				tm.myDel(delName);
+				System.out.println("删除成功！");
+			}
+		}
+		// 返回主界面
+		myMainUI();
+	}
+
+	// 修改界面
+	public void myUpdateUI() {
+		System.out.println("------------------修改电话本-------------------");
+		System.out.println("请输入要修改的姓名：");
+		String updateName = sc.next();
+		// 判断联系人是否存在
+		PeopleInfo piInfo = tm.mySelect(updateName);
+		if(piInfo==null){
+			System.out.println("无信息！");
+		}else{
+			System.out.println(piInfo.toString());
+			System.out.println("请重新输入信息：");
+			System.out.println("姓名：");
+			piInfo.setName(sc.next());
+			System.out.println("性别：");
+			piInfo.setSex(sc.next());
+			System.out.println("年龄：");
+			piInfo.setAge(sc.nextInt());
+			System.out.println("QQ:");
+			piInfo.setQQ(sc.next());
+			System.out.println("电话：");
+			piInfo.setTelNo(sc.next());
+			System.out.println("地址：");
+			piInfo.setDir(sc.next());
+		}
+		
+		// 返回主界面
+		myMainUI();
+	}
+
+	// 查询所有信息界面
+	public void mySelectAllUI() {
+		Iterator<PeopleInfo> it = tm.list.iterator();
+		while (it.hasNext()) {
+			PeopleInfo p = it.next();
+			System.out.println(p);
+		}
+		// 返回主界面
+		myMainUI();
+	}
+
+	// 查询单个联系人界面
+	public void mySelectUI() {
+		System.out.println("------------------按姓名查询电话本-------------------");
+		System.out.println("请输入要查询的姓名：");
+		String selectName = sc.next();
+		PeopleInfo pInfo = tm.mySelect(selectName);
+		if(pInfo==null){
+			System.out.println("当前联系人不存在！");
+		}else{
+			System.out.println(pInfo.toString());
+		}
+		// 返回主界面
+		myMainUI();
+	}
+
+	// 退出界面
+	public void myQuitUI() {
+		System.out.println("谢谢使用！");
+		sc.close();
+		System.exit(0);
+	}
+}

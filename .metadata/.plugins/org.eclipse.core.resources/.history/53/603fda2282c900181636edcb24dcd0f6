@@ -1,0 +1,17 @@
+package com.hpe.test01;
+
+public class Test01 {
+	public static void main(String[] args) {
+		int a = 2;
+		int b = 3;
+		Number(a ,b);
+		System.out.println(a +","+ b);
+	}
+	public static void Number(int a, int b) {
+		int temp = 0;
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	
+}

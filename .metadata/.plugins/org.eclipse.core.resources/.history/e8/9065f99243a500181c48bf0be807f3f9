@@ -1,0 +1,9 @@
+package com.tz.assigments01;
+
+class Station2 implements Runnable {
+	
+}
+
+public class SaleTicket02 {
+
+}

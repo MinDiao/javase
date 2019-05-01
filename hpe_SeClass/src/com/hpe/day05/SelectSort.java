@@ -1,0 +1,24 @@
+package com.hpe.day05;
+/*选择排序法*/
+public class SelectSort {
+	
+	public static void main(String[] args) {
+		
+		int[] ages = new int[] {3,2,4,6};
+		for (int i = 0; i < ages.length; i++) {
+			int min = ages[i];//记录最小值的索引值
+			for (int j = i + 1; j < ages.length; j++) {
+				if (ages[min] > ages[j]) {
+					min = j;
+				}
+			}
+			if (min != i) {
+				int temp = ages[i];
+				ages[i] = ages[min];
+				ages[min] = temp;
+			}
+		}
+		
+	}
+	
+}

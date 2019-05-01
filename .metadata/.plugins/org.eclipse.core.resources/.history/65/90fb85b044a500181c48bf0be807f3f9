@@ -1,0 +1,35 @@
+package com.tz.assigments01;
+
+class Station extends Thread {
+	public Station(String name) {
+		super(name);
+	}
+	static int ticket = 20;
+	static Object ob = "a";
+	public void run() {
+		while(ticket > 0) {
+			synchronized (ob) {
+				if (ticket > 0) {
+					System.out.println(getName() +"站台卖的第"+ ticket +"张票");
+					ticket--;
+				}
+			}
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+public class SaleTicket {
+	public static void main(String[] args) {
+		Station s1 = new Station("A");
+		Station s2 = new Station("B");
+		Station s3 = new Station("C");
+		s1.start();
+		s2.start();
+		s3.start();
+	}
+}

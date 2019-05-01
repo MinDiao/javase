@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=zw_AssetManager/src&lt;com.zw.dao{IBankDao.java[IBankDao" modifiers="513" timestamp="1541407904622"/>
+<typeInfo handle="=zw_AssetManager/src&lt;com.zw.dao{IUserDao.java[IUserDao" modifiers="513" timestamp="1541737551850"/>
+<typeInfo handle="=zw_AssetManager/src&lt;com.zw.service{IUserService.java[IUserService" modifiers="513" timestamp="1541737963600"/>
+<typeInfo handle="=zw_AssetManager/src&lt;com.zw.dao{IAssetDao.java[IAssetDao" modifiers="513" timestamp="1541729746262"/>
+<typeInfo handle="=zw_AssetManager/src&lt;com.zw.service{IAssetService.java[IAssetService" modifiers="513" timestamp="1541553193404"/>
+<typeInfo handle="=zw_life_assistant/src&lt;com.life.dao{IAccountDao.java[IAccountDao" modifiers="513" timestamp="1541946784559"/>
+<typeInfo handle="=zw_life_assistant/src&lt;com.life.service{IAccountService.java[IAccountService" modifiers="513" timestamp="1541943590832"/>
+<typeInfo handle="=zw_life_assistant/src&lt;com.life.dao{IRankingDao.java[IRankingDao" modifiers="513" timestamp="1541958319933"/>
+<typeInfo handle="=zw_life_assistant/src&lt;com.life.service{IRankingService.java[IRankingService" modifiers="513" timestamp="1541958389372"/>
+</typeInfoHistroy>

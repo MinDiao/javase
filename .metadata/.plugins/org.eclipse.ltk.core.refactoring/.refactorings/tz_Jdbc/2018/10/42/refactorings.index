@@ -1,0 +1,6 @@
+1539609138078	Copy compilation unit
+1539609144193	Rename type 'JDBCconnectionTest2'
+1539609395662	Extract method 'closeConnection'
+1539609452149	Extract method 'getConnection'
+1539610187435	Rename type 'JDBCMain'
+1539610217778	Rename type 'Main'

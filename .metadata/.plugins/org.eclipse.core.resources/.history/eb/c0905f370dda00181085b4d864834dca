@@ -1,0 +1,26 @@
+package com.tz.integer;
+
+public class UDPClientServerRunnableTest {
+
+	public static void main(String[] args) {
+		UDPServerScannerRunnable us = new UDPServerScannerRunnable(6000,"127.0.0.2");
+		Thread server = new Thread(us);
+		
+		UDPClientScannerRunnable uc = new UDPClientScannerRunnable("127.0.0.1", 6000);
+		Thread client = new Thread(uc);
+		
+		//启动服务端
+		server.start();
+		
+		//先启动服务端
+		try {
+			Thread.sleep(100);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+		//启动客户端
+		client.start();
+	}
+
+}

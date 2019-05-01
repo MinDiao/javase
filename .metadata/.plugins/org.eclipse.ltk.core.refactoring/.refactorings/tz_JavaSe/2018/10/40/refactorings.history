@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.tz.KnowledgePoint.OrdinarySort&apos; to &apos;MaxMin&apos;&#x0D;&#x0A;- Original project: &apos;TZ_JAVASE_01&apos;&#x0D;&#x0A;- Original element: &apos;com.tz.KnowledgePoint.OrdinarySort&apos;&#x0D;&#x0A;- Renamed element: &apos;com.tz.KnowledgePoint.MaxMin&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;OrdinarySort&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.tz.KnowledgePoint{OrdinarySort.java[OrdinarySort" matchStrategy="1" name="MaxMin" qualified="false" references="true" similarDeclarations="false" stamp="1538672768498" textual="false" version="1.0"/>
+</session>

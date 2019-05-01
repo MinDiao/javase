@@ -1,0 +1,20 @@
+package com.tz.test;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+public class Test26 {
+	public static void main(String[] args) {
+		String s = "ECALIYHWEQAEFSZC";
+		char[] c = s.toCharArray();
+		HashMap<Character,Integer> map = new HashMap<Character,Integer>();
+		for (int i = 0; i < c.length; i++) {
+			
+				map.put(c[i], map.get(c[i]));
+		}	
+		for (Entry<Character, Integer> entry : map.entrySet()) {
+			System.out.print(entry.getKey()+"个:"+entry.getValue()+" ");
+		}
+	}
+}

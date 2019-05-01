@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+  <default-config>
+  
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+    <!-- <property name="jdbcUrl">jdbc:mysql:///mybase</property> -->
+    <property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/telephone</property>
+    <property name="user">root</property>
+    <property name="password">123456</property>
+    <!-- 初始化连接数量 -->
+    <property name ="initialPoolSize">5</property>
+     <!-- 最小连接数 -->
+    <property name ="minPoolSize">5</property>
+      <!-- 最大连接数 -->
+    <property name ="maxPoolSize">20</property>
+
+  </default-config>
+
+  <!-- This app is massive! -->
+  <!-- 通过名字来连接数据库 -->
+  <named-config name="oracle"> 
+  
+    <property name="driverClass">com.mysql.jdbc.Driver</property>
+    <property name="jdbcUrl">jdbc:mysql:///mybase</property>
+    <property name="user">root</property>
+    <property name="password">1234</property>
+
+  </named-config>
+</c3p0-config>

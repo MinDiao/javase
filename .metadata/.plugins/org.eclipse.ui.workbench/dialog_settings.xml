@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="WorkbenchPreferenceDialogSettings">
+		<item value="177" key="DIALOG_Y_ORIGIN"/>
+		<item value="32" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.internal.QuickAccess">
+		<item value="-1" key="dialogHeight"/>
+		<item value="-1" key="dialogWidth"/>
+		<list key="textEntries">
+		</list>
+		<list key="orderedElements">
+		</list>
+		<list key="orderedProviders">
+		</list>
+		<list key="textArray">
+		</list>
+	</section>
+	<section name="PreferencesImportWizard">
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.wst.xml.ui.internal.wizards.NewXMLWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jpt.dbws"/>
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.jst.ws.ui.new"/>
+			<item value="org.eclipse.wst.XMLCategory"/>
+			<item value="org.eclipse.ui.Examples"/>
+		</list>
+	</section>
+	<section name="FileSystemExportWizard">
+		<item value="false" key="WizardFileSystemResourceExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID"/>
+		<item value="false" key="WizardFileSystemResourceExportPage1.STORE_RESOLVE_LINKED_RESOURCES_ID"/>
+		<item value="false" key="WizardFileSystemResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<list key="WizardFileSystemResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\asus\Desktop"/>
+			<item value="C:\Users\Administrator\Desktop"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\35_升班考试\考试知识点\code"/>
+			<item value="D:\study\hpe\作业\作业3"/>
+			<item value="D:\study\hpe\作业"/>
+		</list>
+	</section>
+	<section name="ZipFileImportWizard">
+	</section>
+	<section name="ImportExportAction">
+		<item value="org.eclipse.ui.wizards.export.ZipFile" key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID"/>
+		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
+		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="PreferencesExportWizard">
+	</section>
+	<section name="FileSystemImportWizard">
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID"/>
+		<item value="false" key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\34_网络编程_2\Day33\code\Day32"/>
+			<item value="D:\study\hpe\作业\4"/>
+			<item value="D:\study\hpe\作业\就业保障三班-刘锦荣"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\21_集合\Day20\code\Day20"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\16_多线程\Day16\code\Day15"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\16_多线程\Day16\code\Day16"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\15_异常\Day15\code\Day15"/>
+			<item value="E:\Study\后端\java\潭州教育_中级班\JavaSE1807(梁辰)\14_Object 包装类 匿名内部类\Day14\code\Day14"/>
+		</list>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
+		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\Administrator\Desktop\个人生活助手.zip"/>
+			<item value="C:\Users\Administrator\Desktop\上课项目-资产管理系统.zip"/>
+			<item value="C:\Users\Administrator\Desktop\课上-资产管理系统.zip"/>
+			<item value="C:\Users\Administrator\Desktop\员工管理系统.zip"/>
+			<item value="C:\Users\Administrator\Desktop\银行课上项目.zip"/>
+			<item value="C:\Users\Administrator\Desktop\第六次作业\电话本项目.zip"/>
+			<item value="C:\Users\Administrator\Desktop\兆物_银行管理系统.zip"/>
+			<item value="F:\Study\HPE\兆物合班\02-jdbc2-学生管理小项目\作业\电话本使用三层架构项目.zip"/>
+			<item value="C:\Users\asus\Desktop\zw-jdbc-tel.zip"/>
+		</list>
+	</section>
+</section>

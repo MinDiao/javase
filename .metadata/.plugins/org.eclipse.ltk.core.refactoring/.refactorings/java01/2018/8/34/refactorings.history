@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;com.tz.assigments&apos; to &apos;javaassigment/src&apos;&#x0D;&#x0A;- Original project: &apos;java01&apos;&#x0D;&#x0A;- Destination element: &apos;javaassigment/src&apos;&#x0D;&#x0A;- Original element: &apos;java01/src/com.tz.assigments&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=javaassigment/src" element1="/src&lt;com.tz.assigments" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1534671524581" version="1.0"/>
+</session>

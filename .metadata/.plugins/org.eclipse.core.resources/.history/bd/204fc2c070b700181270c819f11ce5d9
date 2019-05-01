@@ -1,0 +1,15 @@
+package com.hp.assigments05;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		Student s1 = new Student(12,"张三","男",19,78);
+		Student s2 = new Student(34,"李四","女",23,89);
+		Student s3 = new Student(45,"王五","男",53,67);
+		s1.cell();
+		s2.cell();
+		s3.cell();
+		System.out.println((s1.getJava() + s1.getJava() + s1.getJava() ) / 3);
+	}
+
+}

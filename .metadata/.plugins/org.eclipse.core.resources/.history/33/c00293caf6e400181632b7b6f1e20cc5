@@ -1,0 +1,70 @@
+/**
+ * 
+ */
+package com.life.view;
+
+import java.util.Scanner;
+
+import com.life.po.Users;
+import com.life.service.IUsersService;
+import com.life.service.impl.UsersServiceImpl;
+
+/** 
+ * 	类描述：
+ * 	作者： LiuJinrong 
+ * 	创建日期：2018年11月10日
+ * 	修改人：
+ * 	修改日期：
+ * 	修改内容：
+ * 	版本号： 1.0.0   
+ */
+public class UserUI {
+	
+	// 键盘输入
+	private static Scanner sc = new Scanner(System.in);
+	// 实现用户服务层
+	private static IUsersService userservice = new UsersServiceImpl();
+	// 初始化实体类创建实体类的成员变量
+	private static Users users1 = new Users();
+	
+	// 用户登录
+	public static void login(){
+		// 初始化输入次数
+		int inputCount = 3;
+		while (true) {
+			System.out.println("----------个人生活助手平台----------");
+			System.out.println("----------用户登录----------");
+			System.out.println("请输入用户名:");
+			String name = sc.next();
+			System.out.println("请输入密码:");
+			String psw = sc.next();
+			// 实例化实体类并传入参数
+			Users users = new Users(name, psw);
+			// 接收参数
+			users1 = userservice.login(users);
+			// 判断是否登录成功
+			if (users1 != null) {
+				System.out.println("登录成功");
+				//停止循环并返回方法调用处
+				// TODO 生活助手菜单
+				return;
+			} else {
+				if (--inputCount > 0) {
+					System.err.println("用户名或密码错误,还有"+(inputCount)+"次机会");
+				} else {
+					System.out.println("连接输入三次有误,请确认后登录!");
+					// 停止循环并返回方法调用处
+					return;
+				}
+			}
+		}
+
+	}
+
+	// 用户注册
+	public static void register(){
+		
+	}
+	
+	
+}

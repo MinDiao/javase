@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;HPE_JAVASE_assigment&apos; to &apos;HPE_JAVASE_assigments&apos;&#x0D;&#x0A;- Original element: &apos;HPE_JAVASE_assigment&apos;&#x0D;&#x0A;- Renamed element: &apos;HPE_JAVASE_assigment&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;HPE_JAVASE_assigment&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=HPE_JAVASE_assigment" name="HPE_JAVASE_assigments" references="true" stamp="1536292623777" version="1.0"/>
+</session>

@@ -1,0 +1,113 @@
+package com.hpe.day13_2;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+/*业务层（控制层C）：主要实现电话本的增、删、改、查*/
+public class TelMange {
+	PeopleInfo peopleInfos = null; // 主要用来存放好友信息
+	String[] keyName = null;
+	LinkedList<PeopleInfo> list = null;
+	int count = 0; // 主要记录当前电话本中联系人的个数
+	// 构造方法
+
+	public TelMange() {
+		keyName = new String[50]; // 默认只能存储50个联系人
+		peopleInfos = new PeopleInfo();
+		list = new LinkedList<PeopleInfo>();
+	}
+
+	public TelMange(int number) {
+		keyName = new String[number]; // 根据需求创创建number个联系人
+		peopleInfos = new PeopleInfo();
+		list = new LinkedList<PeopleInfo>();
+	}
+
+	/* function:电话话本的增加
+	 	return:0 添加成功
+				-1：联系人存在
+				-2:已满
+	*/
+	public int myAdd(PeopleInfo pi) {
+		// 查询当前电话本中该联系人是否已存在
+		if(mySelect(pi.getName())!=null){
+			return -1;
+		}
+		
+		// 如果不存在，则添加
+		if (count + 1 < keyName.length) {
+			//用数组获取名字
+			keyName[count++] = pi.getName();
+			//将对象添加到集合中
+			list.add(pi);
+			return 0;
+		}else{
+			// 电话本容量不足
+			return -2;
+		}
+	}
+
+	// 电话话本的删除
+	public boolean myDel(String name) {
+		// 首先找到要删除的联系人
+		int i;	//保存要删除人的索引
+		for(i=0;i<count;i++){
+			if(name.equals(keyName[i])){
+				break;
+			}
+		}
+		// 如果没找到
+		if(i>=count){
+			System.out.println("您删除的联系人不存在");
+			return false;
+		}
+		// 删除该联系人，并将其后面的所有联系人前提一位
+		list.remove(i);
+		keyName[i]=null;
+		for(;i<count-1;i++){
+			
+			keyName[i]=keyName[i+1];
+		}
+		keyName[count-1]=null;
+		count--;
+		
+		return true;
+	}
+
+	// 电话话本的修改
+	public boolean myUpdate(PeopleInfo pi) {
+		//根据姓名先找到该联系人
+		String name = pi.getName();
+		int i;	//保存要删除人的索引
+		for(i=0;i<count;i++){
+			if(name.equals(keyName[i])){
+				break;
+			}
+		}
+		// 如果没找到
+		if(i>=count){
+			System.out.println("您修改的联系人不存在");
+			return false;
+		}
+		//如果找到，则直接赋值
+		keyName[i] = pi.getName();
+		list.remove(keyName[i]);
+		list.add(pi);
+		
+		return true;
+	}
+
+	// 电话话本的查询
+	public PeopleInfo mySelect(String name) {
+		//根据名字查找联系人
+		int i;	//保存要删除人的索引
+		for(i=0;i<count;i++){
+			if(name.equals(keyName[i])){
+				return list.get(i);
+			}
+		}
+		//如果存在则直接返回，否则返回null
+		//System.out.println("您所查询的联系人不存在！");
+		return null;
+	}
+}
